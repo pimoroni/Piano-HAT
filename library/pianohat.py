@@ -95,11 +95,11 @@ def on_instrument(handler):
     _on_instrument = handler
 
 # Keys C, C#, D, D#, E, F, F# and G
-_piano_ctog = cap1xxx.Cap1188(i2c_addr=0x28)
+_piano_ctog = cap1xxx.Cap1188(i2c_addr=0x28, alert_pin=4)
 _setup_cap(_piano_ctog)
 
 # Keys G#, A, A#, B, C, Instrument, Octave -, Octave +
-_piano_atoc = cap1xxx.Cap1188(i2c_addr=0x2b)
+_piano_atoc = cap1xxx.Cap1188(i2c_addr=0x2b, alert_pin=27)
 _setup_cap(_piano_atoc)
 
 for x in range(0,8):
@@ -107,3 +107,6 @@ for x in range(0,8):
     _piano_ctog.on(x,event='release',handler=lambda evt: _handle_event(0,evt,RELEASED))
     _piano_atoc.on(x,event='press',  handler=lambda evt: _handle_event(1,evt,PRESSED ))
     _piano_atoc.on(x,event='release',handler=lambda evt: _handle_event(1,evt,RELEASED))
+
+#_piano_ctog.clear_interrupt()
+#_piano_atoc.clear_interrupt()
