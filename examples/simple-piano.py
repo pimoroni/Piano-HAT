@@ -17,7 +17,7 @@ octaves   = 0
 
 pygame.mixer.pre_init(44100, -16, 1, 512)
 pygame.mixer.init()
-pygame.mixer.set_num_channels(16)
+pygame.mixer.set_num_channels(32)
 
 patches = glob.glob(os.path.join(BANK,'*'))
 patch_index = 0
