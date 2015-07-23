@@ -43,6 +43,7 @@ def _setup_cap(cap):
     cap._write_byte(cap1xxx.R_GENERAL_CONFIG, 0b00111000)
     cap._write_byte(cap1xxx.R_CONFIGURATION2, 0b01100000)
     cap.set_touch_delta(10)
+    cap.set_led_direct_ramp_rate(0,0)
 
 def _handle_event(cap_index, event, state):
     global _pressed
@@ -71,6 +72,10 @@ def set_led(index, state):
         _piano_atoc.set_led_state(index-8,state)
     else:
         _piano_ctog.set_led_state(index,state)
+
+def set_led_ramp_rate(rise,fall):
+    _piano_ctog.set_led_direct_ramp_rate(rise, fall)
+    _piano_atoc.set_led_direct_ramp_rate(rise, fall)
 
 def get_state(index=-1):
     if index > 0 and index < 16:
