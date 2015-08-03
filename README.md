@@ -5,6 +5,16 @@
 * Octave Up/Down
 * Instrument Select
 
+#Installing Piano HAT
+
+We've created a simple one-liner to install Piano HAT, just open up Terminal and type:
+
+```bash
+curl -sSL get.pimoroni.com/pianohat | bash
+```
+
+Then follow the on-screen instructions.
+
 #Using Piano HAT
 
 This library lets you use Piano HAT in Python to control whatever project you might assemble.
