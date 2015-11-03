@@ -50,7 +50,7 @@ def load_samples(patch):
     files.sort(key=natural_sort_key)
     octaves = len(files) / 12
     samples = [pygame.mixer.Sound(sample) for sample in files]
-    octave = octaves / 2
+    octave = int(octaves / 2)
 
 
 pianohat.auto_leds(True)

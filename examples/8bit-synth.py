@@ -4,6 +4,7 @@ import numpy
 import time
 import math
 import signal
+
 print("""
 8-bit Piano HAT
 
@@ -26,7 +27,7 @@ def play_sample(channel, pressed):
     if pressed:
         notes[channel].play(loops=-1)
     else:
-        notes[channel].stop()
+        notes[channel].fadeout(1)
 
 def generate_sample(frequency=440, duration=1, bit_rate=8, sample_rate=11025):
     sample_count = int(round(duration*sample_rate))
@@ -34,10 +35,18 @@ def generate_sample(frequency=440, duration=1, bit_rate=8, sample_rate=11025):
     buffer = numpy.zeros((sample_count, 2), dtype = numpy.int16)
     max_sample = 2**(bit_rate-1) - 1
 
+    #r = sample_rate / float(frequency) # Sawtooth
+
+    r = 2*math.pi*frequency # Sine
+
     for s in range(sample_count):
         t = float(s)/sample_rate # Time index
 
-        buffer[s][0] = int(round(max_sample*math.sin(2*math.pi*frequency*t)))
+        m = math.sin(r*t) # Sine
+
+        #m = (s % r) / r # Sawtooth
+        
+        buffer[s][0] = int(round(max_sample*m))
         buffer[s][1] = buffer[s][0]
 
     sound = pygame.sndarray.make_sound(buffer)
@@ -45,7 +54,7 @@ def generate_sample(frequency=440, duration=1, bit_rate=8, sample_rate=11025):
     return sound
 
 print("Initializing subsystem...")
-pygame.mixer.pre_init(SAMPLERATE, -BITRATE, 2, 512)
+pygame.mixer.pre_init(SAMPLERATE, -BITRATE, 4, 512)
 pygame.mixer.init()
 
 print("Generating samples...")
