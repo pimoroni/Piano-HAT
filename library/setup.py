@@ -18,7 +18,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
 classifiers = ['Development Status :: 5 - Production/Stable',
                'Operating System :: POSIX :: Linux',
@@ -30,16 +33,16 @@ classifiers = ['Development Status :: 5 - Production/Stable',
                'Topic :: Software Development',
                'Topic :: System :: Hardware']
 
-setup(name		= 'PianoHAT',
-	version		= '0.0.1',
-	author		= 'Philip Howard',
-	author_email	= 'phil@pimoroni.com',
-	description	= 'A 13 key Piano HAT for your Raspberry Pi',
-	long_description= open('README.txt').read() + open('CHANGELOG.txt').read(),
-	license		= 'MIT',
-	keywords	= 'Raspberry Pi Piano HAT',
-	url		= 'http://shop.pimoroni.com',
-	classifiers     = classifiers,
-	py_modules	= ['pianohat'],
-	install_requires= ['rpi.gpio >= 0.5.10','cap1xxx']
+setup(name      = 'PianoHAT',
+    version     = '0.0.1',
+    author      = 'Philip Howard',
+    author_email= 'phil@pimoroni.com',
+    description = 'A 13 key Piano HAT for your Raspberry Pi',
+    long_description = open('README.txt').read() + open('CHANGELOG.txt').read(),
+    license     = 'MIT',
+    keywords    = 'Raspberry Pi Piano HAT',
+    url         = 'http://shop.pimoroni.com',
+    classifiers = classifiers,
+    py_modules  = ['pianohat'],
+    install_requires = ['cap1xxx']
 )
