@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import pianohat
 import pygame
 import numpy
