@@ -5,6 +5,8 @@
 * Octave Up/Down
 * Instrument Select
 
+Learn more: https://shop.pimoroni.com/products/piano-hat
+
 #Installing Piano HAT
 
 We've created a super-easy installation script that will install all pre-requisites and get your Piano HAT up and running in a jiffy. To run it fire up Terminal which you'll find in Menu -> Accessories -> Terminal on your Raspberry Pi desktop like so:
