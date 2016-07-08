@@ -1,4 +1,4 @@
-![Piano HAT](piano-hat-logo.png)
+![Piano HAT](piano-hat-logo-new.png)
 
 * 16 Capacitive Touch Buttons
 * 13 Notes from C to C
