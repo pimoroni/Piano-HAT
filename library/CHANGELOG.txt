@@ -1,0 +1,17 @@
+0.0.4
+
+* Initial commit to Raspbian apt repository
+
+0.0.3
+
+* Updated README
+
+0.0.2
+
+* Tweaks for alert support
+* Increased number of channels to prevent pauses
+* Added ramp rate control
+
+0.0.1
+
+* Initial Release
