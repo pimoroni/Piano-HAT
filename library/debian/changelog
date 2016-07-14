@@ -1,0 +1,26 @@
+pianohat (0.0.4) UNRELEASED; urgency=low
+
+  * Initial commit to Raspbian apt repository
+
+ -- Phil Howard <phil@pimoroni.com>  Thu, 17 Mar 2016 00:00:00 +0000
+
+pianohat (0.0.3) UNRELEASED; urgency=low
+
+  * Updated README
+
+ -- Phil Howard <phil@pimoroni.com>  Fri, 7 Aug 2015 00:00:00 +0000
+
+pianohat (0.0.2) UNRELEASED; urgency=low
+
+  * Tweaks for alert support
+  * Increased number of channels to prevent pauses
+  * Added ramp rate control
+
+ -- Phil Howard <phil@pimoroni.com>  Thu, 30 Jul 2015 00:00:00 +0000
+ 
+
+pianohat (0.0.1) UNRELEASED; urgency=low
+
+  * Initial Release
+
+ -- Phil Howard <phil@pimoroni.com>  Thu, 16 Jul 2015 00:00:00 +0000

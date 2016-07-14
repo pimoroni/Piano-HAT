@@ -1,0 +1,12 @@
+README
+
+Piano HAT provides a dinky piano add-on for the Raspberry Pi. Use it to play music in Python, control software synths, take control of hardware synthesizers, or surprise us with your creativity!
+
+Learn more: https://shop.pimoroni.com/products/piano-hat
+For examples run: `curl -sS get.pimoroni.com/pianohat | bash`
+
+IMPORTANT
+
+Piano HAT requires i2c.
+To enable run `curl get.pimoroni.com/i2c | bash`
+or use raspi-config and reboot your Raspberry Pi.
