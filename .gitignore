@@ -15,8 +15,9 @@ eggs/
 *.build
 *.changes
 *.orig.*
+library/debian/
+packaging/*tar.xz
 testing/
 MANIFEST
-
 pip-log.txt
 pip-delete-this-directory.txt
