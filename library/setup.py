@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 """
 Copyright (c) 2014 Pimoroni
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -33,16 +34,17 @@ classifiers = ['Development Status :: 5 - Production/Stable',
                'Topic :: Software Development',
                'Topic :: System :: Hardware']
 
-setup(name      = 'PianoHAT',
-    version     = '0.0.4',
-    author      = 'Philip Howard',
-    author_email= 'phil@pimoroni.com',
-    description = 'A 13 key Piano HAT for your Raspberry Pi',
-    long_description = open('README.txt').read() + open('CHANGELOG.txt').read(),
-    license     = 'MIT',
-    keywords    = 'Raspberry Pi Piano HAT',
-    url         = 'http://shop.pimoroni.com',
-    classifiers = classifiers,
-    py_modules  = ['pianohat'],
-    install_requires = ['cap1xxx']
+setup(
+    name            = 'PianoHAT',
+    version         = '0.0.4',
+    author          = 'Philip Howard',
+    author_email    = 'phil@pimoroni.com',
+    description     = 'A 13 key Piano HAT for your Raspberry Pi',
+    long_description= open('README.txt').read() + open('CHANGELOG.txt').read(),
+    license         = 'MIT',
+    keywords        = 'Raspberry Pi Piano HAT',
+    url             = 'http://shop.pimoroni.com',
+    classifiers     = classifiers,
+    py_modules      = ['pianohat'],
+    install_requires= ['cap1xxx']
 )
