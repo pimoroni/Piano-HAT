@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 
-import pianohat
-import pygame
-import signal
 import glob
 import os
 import re
+import signal
+
+try:
+    import pygame
+except ImportError:
+    exit("This script requires the pygame module\nInstall with: sudo pip install pygame")
+
+import pianohat
+
+
 BANK = os.path.join(os.path.dirname(__file__), "sounds")
 
 print("""
