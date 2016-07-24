@@ -1,11 +1,17 @@
 #!/usr/bin/env python
 
-import pianohat
-import pygame
-import numpy
-import time
 import math
+import numpy
 import signal
+import time
+
+try:
+    import pygame
+except ImportError:
+    exit("This script requires the pygame module\nInstall with: sudo pip install pygame")
+
+import pianohat
+
 
 print("""
 8-bit Piano HAT

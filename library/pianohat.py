@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 
-import cap1xxx, signal
+import signal
+
+try:
+    import cap1xxx
+except ImportError:
+    exit("This library requires the cap1xxx module\nInstall with: sudo pip install cap1xxx")
+
 
 _on_note        = None
 _on_octave_up   = None

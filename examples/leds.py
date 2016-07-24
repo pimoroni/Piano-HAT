@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-import pianohat
 import time
+
+import pianohat
+
 
 pianohat.auto_leds(False)
 
