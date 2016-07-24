@@ -1,16 +1,23 @@
 #!/usr/bin/env python
+
+import os
+import signal
+import time
+
+try:
+    import pygame
+except ImportError:
+    exit("This script requires the pygame module\nInstall with: sudo pip install pygame")
+
+import pianohat
+
+
 print("""
 This example will teach you to play a simple melody
 by lighting up the keys you must press.
 
 Press CTRL+C to exit.
 """)
-
-import pianohat
-import pygame
-import time
-import signal
-import os
 
 SOUNDS = os.path.join(os.path.dirname(__file__), "sounds/piano")
 
