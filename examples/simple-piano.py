@@ -4,6 +4,7 @@ import glob
 import os
 import re
 import signal
+from sys import exit
 
 try:
     import pygame
