@@ -5,6 +5,7 @@ import os
 import re
 import signal
 import time
+from sys import exit
 
 try:
     import midi
