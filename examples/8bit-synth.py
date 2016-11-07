@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 
 import math
-import numpy
 import signal
 import time
+from sys import exit
+
+try:
+    import numpy
+except ImportError:
+    exit("This script requires the numpy module\nInstall with: sudo pip install numpy")
 
 try:
     import pygame

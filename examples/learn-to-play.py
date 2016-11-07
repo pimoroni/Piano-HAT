@@ -3,6 +3,7 @@
 import os
 import signal
 import time
+from sys import exit
 
 try:
     import pygame
