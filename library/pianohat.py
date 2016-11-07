@@ -8,6 +8,7 @@ try:
 except ImportError:
     exit("This library requires the cap1xxx module\nInstall with: sudo pip install cap1xxx")
 
+__version__ = '0.0.5'
 
 _on_note        = None
 _on_octave_up   = None
