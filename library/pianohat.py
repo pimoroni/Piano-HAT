@@ -8,6 +8,7 @@ try:
 except ImportError:
     exit("This library requires the cap1xxx module\nInstall with: sudo pip install cap1xxx")
 
+__version__ = '0.0.5'
 
 _on_note        = None
 _on_octave_up   = None
@@ -71,38 +72,102 @@ def _handle_event(cap_index, event, state):
         _on_note(channel, state)
 
 def auto_leds(enable = True):
+    """Enable or disable automatic LEDs
+
+    :param enable: enable or disable: True/False
+
+    on automatic, the corresponding LED will light when 
+    a key is touched and turn off when it is released.
+
+    """
+
     _piano_ctog._write_byte(cap1xxx.R_LED_LINKING, 0b11111111 * enable)
     _piano_atoc._write_byte(cap1xxx.R_LED_LINKING, 0b11111111 * enable)
 
 def set_led(index, state):
+    """Turn an  LED on or off
+
+    :param index: index of the LED to toggle: from 0 to 15
+    :param state: state to set the LED: either False or True
+
+    """
+
     if index >= 8:
         _piano_atoc.set_led_state(index-8,state)
     else:
         _piano_ctog.set_led_state(index,state)
 
 def set_led_ramp_rate(rise,fall):
+    """Set the time it takes an LED to turn on or off
+
+    :param rise: time it takes LED to light in milliseconds
+    :param fall: time it takes LED to turn off in milliseconds
+
+    """
+
     _piano_ctog.set_led_direct_ramp_rate(rise, fall)
     _piano_atoc.set_led_direct_ramp_rate(rise, fall)
 
 def get_state(index=-1):
+    """Get the state of a single key
+
+    :param index: index of key to return, from 0 to 15
+
+    """
+
     if index > 0 and index < 16:
         return _pressed[index]
     else:
         return _pressed
 
 def on_note(handler):
+    """Register handler for press/release of note key
+
+    :param handler: handler function to register
+
+    The handler function should expect two arguments.
+
+    The first is the button index that got the event,
+    and the second is True for pressed and False for released.
+
+    """
+
     global _on_note
     _on_note = handler
 
 def on_octave_up(handler):
+    """Register handler for press/release of octave_up key
+
+    :param handler: handler function to register
+
+    See on_note for details.
+
+    """
+
     global _on_octave_up
     _on_octave_up = handler
 
 def on_octave_down(handler):
+    """Register handler for press/release of octave_down key
+
+    :param handler: handler function to register
+
+    See on_note for details.
+
+    """
+
     global _on_octave_down
     _on_octave_down = handler
 
 def on_instrument(handler):
+    """Register handler for press/release of instrument key
+
+    :param handler: handler function to register
+
+    See on_note for details.
+
+    """
+
     global _on_instrument
     _on_instrument = handler
 
