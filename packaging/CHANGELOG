@@ -1,3 +1,9 @@
+pianohat (0.0.5) stable; urgency=low
+
+  * Initial commit to Raspbian apt repository
+
+ -- Phil Howard <phil@pimoroni.com>  Mon, 7 Nov 2016 00:00:00 +0000
+
 pianohat (0.0.4) UNRELEASED; urgency=low
 
   * Initial commit to Raspbian apt repository

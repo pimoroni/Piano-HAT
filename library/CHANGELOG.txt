@@ -1,3 +1,8 @@
+0.0.5
+-----
+
+* Initial commit to Raspbian apt repository
+
 0.0.4
 -----
 
