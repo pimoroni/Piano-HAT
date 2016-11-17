@@ -13,6 +13,7 @@ This documentation will guide you through the methods available in the Piano HAT
 Piano HAT is a musical Raspberry Pi add-on with 13 capacitive-touch piano keys plus octave and instrument select pads.
 
 * More information - https://shop.pimoroni.com/products/piano-hat
+* GPIO Pinout - http://pinout.xyz/pinout/piano_hat
 * Get the code - https://github.com/pimoroni/piano-hat
 * Get help - http://forums.pimoroni.com/c/support
 
