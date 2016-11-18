@@ -6,10 +6,6 @@ import site
 import mock
 
 
-PACKAGE_NAME = u"Piano HAT"
-PACKAGE_HANDLE = "PianoHAT"
-PACKAGE_MODULE = "pianohat"
-PACKAGE_VERSION = "0.0.5"
 
 # Prompte /usr/local/lib to the front of sys.path
 #sys.path.insert(0,site.getsitepackages()[0])
@@ -59,6 +55,14 @@ def setup(app):
     app.add_autodocumenter(ModuleOutlineDocumenter)
 
     ModuleOutlineDocumenter.objtype = 'module'
+import pianohat
+
+PACKAGE_NAME = u"Piano HAT"
+PACKAGE_HANDLE = "PianoHAT"
+PACKAGE_MODULE = "pianohat"
+PACKAGE_VERSION = pianohat.__version__
+
+suppress_warnings = ["app.add_directive"]
 
 # -- General configuration ------------------------------------------------
 
