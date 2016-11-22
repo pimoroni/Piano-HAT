@@ -51,6 +51,13 @@ sudo pip2 install pianohat
 
 In all cases you will have to enable the i2c bus.
 
+# Documentation & Support
+
+* Getting started - https://learn.pimoroni.com/tutorial/piano-hat/getting-started-with-piano-hat
+* Function reference - http://docs.pimoroni.com/pianohat/
+* GPIO Pinout - https://pinout.xyz/pinout/piano_hat
+* Get help - http://forums.pimoroni.com/c/support
+
 #Using Piano HAT
 
 This library lets you use Piano HAT in Python to control whatever project you might assemble.
