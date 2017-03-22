@@ -7,7 +7,7 @@
 
 Learn more: https://shop.pimoroni.com/products/piano-hat
 
-#Installing Piano HAT
+# Installing Piano HAT
 
 **Full install ( recommended ):**
 
@@ -18,7 +18,7 @@ We've created a super-easy installation script that will install all pre-requisi
 In the new terminal window type the following and follow the instructions:
 
 ```bash
-curl -sS https://get.pimoroni.com/pianohat | bash
+curl https://get.pimoroni.com/pianohat | bash
 ```
 
 If you choose to download examples you'll find them in `/home/pi/Pimoroni/pianohat/`.
@@ -58,7 +58,7 @@ In all cases you will have to enable the i2c bus.
 * GPIO Pinout - https://pinout.xyz/pinout/piano_hat
 * Get help - http://forums.pimoroni.com/c/support
 
-#Using Piano HAT
+# Using Piano HAT
 
 This library lets you use Piano HAT in Python to control whatever project you might assemble.
 
@@ -74,11 +74,11 @@ See `leds.py` for an example of how to take command of the Piano HAT LEDs. You c
 * `set_led(x, True/False)` - lets you set a particular LED to on ( True ) or off ( False ).
 * `auto_leds(False)` - stops Piano HAT from automatically lighting the LEDs when a key is touched
 
-#MIDI!
+# MIDI!
 
 Piano HAT will also work with anything that supports MIDI input, thanks to Python MIDI and the `midi-piano.py` example.
 
-##Installing Python MIDI
+## Installing Python MIDI
 
 This is a little tricky, but if you follow these steps you should get it installed in no time:
 
@@ -90,7 +90,7 @@ And install it: `cd python-midi && sudo ./setup.py install`
 
 If it installs properly, you should get a handy new tool `mididumphw.py` which will tell you what MIDI-compatible synths you've got running and what Client/Port IDs you'll need to connect to to use them.
 
-##Using `midi-piano.py`
+## Using `midi-piano.py`
 
 You'll find the MIDI Piano example in the examples folder of this repository, or in `~/Pimoroni/piano-hat` if you used our installer script. By default it supports SunVox and yoshimi:
 
