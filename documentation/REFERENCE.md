@@ -1,4 +1,4 @@
-#Piano HAT Function Reference
+# Piano HAT Function Reference
 
 This library lets you use Piano HAT in Python to control whatever project you might assemble.
 
@@ -16,7 +16,7 @@ See `leds.py` for an example of how to take command of the Piano HAT LEDs. You c
 
 Piano HAT will also work with anything that supports MIDI input, thanks to Python MIDI and the `midi-piano.py` example.
 
-##Installing Python MIDI
+## Installing Python MIDI
 
 This is a little tricky, but if you follow these steps you should get it installed in no time:
 
@@ -28,7 +28,7 @@ And install it: `cd python-midi && sudo ./setup.py install`
 
 If it installs properly, you should get a handy new tool `mididumphw.py` which will tell you what MIDI-compatible synths you've got running and what Client/Port IDs you'll need to connect to to use them.
 
-##Using `midi-piano.py`
+## Using `midi-piano.py`
 
 You'll find the MIDI Piano example in the examples folder of this repository, or in `~/Pimoroni/piano-hat` if you used our installer script. By default it supports SunVox and yoshimi:
 
