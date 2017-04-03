@@ -21,7 +21,7 @@ If it installs properly, you should get a handy new tool `mididumphw.py` which w
 
 ## Using `midi-piano.py`
 
-You'll find the By default the MIDI Piano example supports SunVox and yoshimi:
+By default the MIDI Piano example supports SunVox and yoshimi:
 
 * Sunvox ( Get it from http://www.warmplace.ru/soft/sunvox/ )
 * Yoshimi ( `sudo apt-get install yoshimi` )
