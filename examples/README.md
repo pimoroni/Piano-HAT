@@ -1,4 +1,4 @@
-Piano HAT will also work with anything that supports MIDI input, thanks to Python MIDI and the `midi-piano.py` example.
+Piano HAT will work with anything that supports MIDI input, thanks to Python MIDI and the `midi-piano.py` example.
 
 ## Installing Python MIDI
 
