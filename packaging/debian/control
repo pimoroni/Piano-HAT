@@ -13,7 +13,7 @@ Architecture: all
 Section: python
 Depends: ${misc:Depends}, ${python:Depends}, python-cap1xxx
 Suggests: i2c-tools, python-pygame
-Description: python library designed to control Piano HAT.
+Description: Python library for the Pimoroni Piano HAT.
  Piano HAT provides a dinky piano add-on for the Raspberry Pi.
  Use it to play music in Python, control software synths,
  take control of hardware synthesizers, or surprise us with your creativity!
@@ -25,7 +25,7 @@ Architecture: all
 Section: python
 Depends: ${misc:Depends}, ${python3:Depends}, python3-cap1xxx
 Suggests: i2c-tools, python3-pygame
-Description: python library designed to control Piano HAT.
+Description: Python library for the Pimoroni Piano HAT.
  Piano HAT provides a dinky piano add-on for the Raspberry Pi.
  Use it to play music in Python, control software synths,
  take control of hardware synthesizers, or surprise us with your creativity!
