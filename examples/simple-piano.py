@@ -28,6 +28,7 @@ We've supplied a piano and drums for you to get started with!
 Press CTRL+C to exit.
 """.format(BANK))
 
+NOTE_OFFSET = 3
 FILETYPES = ['*.wav', '*.ogg']
 samples = []
 files = []
@@ -65,7 +66,7 @@ pianohat.auto_leds(True)
 
 
 def handle_note(channel, pressed):
-    channel = channel + (12 * octave)
+    channel = channel + (12 * octave) + NOTE_OFFSET
     if channel < len(samples) and pressed:
         print('Playing Sound: {}'.format(files[channel]))
         samples[channel].play(loops=0)
