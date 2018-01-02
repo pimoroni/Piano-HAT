@@ -3,3 +3,10 @@ Piano FF by jobro: https://www.freesound.org/people/jobro/packs/2489/
 Sound files contained herein are distributed under the Creative Commmons Attribution license.
 
 Thank you to the author, jobro, for publishing these to freesound.org: https://www.freesound.org/people/jobro/
+
+
+The 20 piano notes missing from jobro's pack are created by Lawrence Fritts for the Musical Instrument Samples Project for the University of Iowa: http://theremin.music.uiowa.edu/MISpiano.html
+
+They have been trimmed to 1 second .wav files and renamed to match the current pattern.
+
+These sounds are to be used 'for any projects, without restrictions': http://theremin.music.uiowa.edu/MIS.html
