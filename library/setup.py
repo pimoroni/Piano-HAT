@@ -36,7 +36,7 @@ classifiers = ['Development Status :: 5 - Production/Stable',
 
 setup(
     name            = 'pianohat',
-    version         = '0.0.5',
+    version         = '0.1.0',
     author          = 'Philip Howard',
     author_email    = 'phil@pimoroni.com',
     description     = 'A 13 key Piano HAT for your Raspberry Pi',

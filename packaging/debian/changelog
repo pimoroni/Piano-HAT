@@ -1,3 +1,10 @@
+pianohat (0.1.0) stable; urgency=low
+
+  * Fix: Defer setup to avoid import side-effects
+  * Fix: Change exit to ImportError
+
+ -- Phil Howard <phil@pimoroni.com>  Tue, 13 Mar 2018 00:00:00 +0000
+
 pianohat (0.0.5) stable; urgency=low
 
   * Initial commit to Raspbian apt repository

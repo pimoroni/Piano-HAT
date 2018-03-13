@@ -1,3 +1,9 @@
+0.1.0
+-----
+
+* Fix: Defer setup to avoid import side-effects
+* Fix: Change exit to ImportError
+
 0.0.5
 -----
 
