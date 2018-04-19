@@ -42,7 +42,7 @@ ATTACK_MS=25
 RELEASE_MS=500
 
 # Fee; free to change the volume!
-volume = {'sine':0.8, 'saw':0.4, 'square':0.4}
+volume = {'sine':0.15, 'saw':0.15, 'square':1.0}
 
 wavetypes = ['sine','saw','square']
 enabled = {'sine':True, 'saw':False, 'square':False}
@@ -51,7 +51,7 @@ notes = {'sine':[],'saw':[],'square':[]}
 
 # The samples are 8bit signed, from -127 to +127
 # so the max amplitude of a sample is 127
-max_sample = 2**(BITRATE - 1) - 1
+max_sample = (2**(BITRATE - 1)) - 1
 
 def handle_instrument(channel, pressed):
     """Handles the Instrument, Octave Up/Down keys
@@ -77,11 +77,11 @@ def play_sample(channel, pressed):
     """Handles the piano keys
     Any enabled samples are played, and *all* samples are turned off is a key is released
     """
-    pianohat.set_led(channel, pressed)
+    print("{}, {}".format(channel, pressed))
     if pressed:
         for t in wavetypes:
             if enabled[t]:
-                notes[t][channel].play(loops=-1, fade_ms=ATTACK_MS)
+                notes[t][channel].play(-1, fade_ms=ATTACK_MS)
     else:
         for t in wavetypes:
             notes[t][channel].fadeout(RELEASE_MS)
@@ -89,13 +89,14 @@ def play_sample(channel, pressed):
 
 def wave_sine(freq, time):
     """Generates a single sine wave sample"""
-    s = math.sin(2*math.pi*freq*time)
+    s = numpy.sin(2*numpy.pi*freq*time)
     return int(round(max_sample * s ))
 
 
 def wave_square(freq, time):
     """Generates a single square wave sample"""
-    return -max_sample if freq*time < 0.5 else max_sample
+    m = int(max_sample * 0.9)
+    return -m if freq*time < 0.5 else m
 
 
 def wave_saw(freq, time):
@@ -118,21 +119,15 @@ def generate_sample(frequency, volume=1.0, wavetype=None):
 
     sample_count = int(round(SAMPLERATE/frequency))
 
-    buf = numpy.zeros((sample_count, 2), dtype = numpy.int8)
-
-    for s in range(sample_count):
-        t = float(s)/SAMPLERATE # Time index
-        buf[s][0] = wavetype(frequency, t)
-        buf[s][1] = buf[s][0] # Copy to stero channel
-
+    buf = numpy.array([wavetype(frequency, float(x)/SAMPLERATE) for x in range(sample_count)]).astype(numpy.int8)
     sound = pygame.sndarray.make_sound(buf)
-    sound.set_volume(volume) # Set the volume to balance sounds
 
+    sound.set_volume(volume) # Set the volume to balance sounds
     return sound
 
 
 print("Initializing subsystem...")
-pygame.mixer.pre_init(SAMPLERATE, -BITRATE, 4, 256)
+pygame.mixer.pre_init(SAMPLERATE, -BITRATE, 1, 1024)
 pygame.mixer.init()
 pygame.mixer.set_num_channels(32)
 
