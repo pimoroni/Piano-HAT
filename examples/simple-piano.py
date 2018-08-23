@@ -17,6 +17,7 @@ import pianohat
 BANK = os.path.join(os.path.dirname(__file__), "sounds")
 
 print("""
+MadelynBrown was here
 This example gives you a simple, ready-to-play instrument which uses .wav files.
 
 For it to work, you must place directories of wav files in:
