@@ -66,7 +66,9 @@ pianohat.auto_leds(True)
 
 
 def handle_note(channel, pressed):
-    channel = channel + (12 * octave) + NOTE_OFFSET
+    channel = channel + (12 * octave)
+    if len(samples) > 13:
+        channel += NOTE_OFFSET
     if channel < len(samples) and pressed:
         print('Playing Sound: {}'.format(files[channel]))
         samples[channel].play(loops=0)
