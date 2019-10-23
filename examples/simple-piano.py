@@ -14,7 +14,7 @@ except ImportError:
 import pianohat
 
 
-BANK = os.path.join(os.path.dirname(__file__), "sounds")
+BANK = os.path.join(os.path.dirname("__file__"), "sounds")
 
 print("""
 This example gives you a simple, ready-to-play instrument which uses .wav files.
