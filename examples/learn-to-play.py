@@ -20,7 +20,7 @@ by lighting up the keys you must press.
 Press CTRL+C to exit.
 """)
 
-SOUNDS = os.path.join(os.path.dirname(__file__), "sounds/piano")
+SOUNDS = os.path.join(os.path.dirname("__file__"), "sounds/piano")
 
 pygame.mixer.pre_init(44100, -16, 1, 512)
 pygame.mixer.init()
