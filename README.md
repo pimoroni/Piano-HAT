@@ -26,7 +26,7 @@ curl https://get.pimoroni.com/pianohat | bash
 
 If you choose to download examples you'll find them in `/home/pi/Pimoroni/pianohat/`.
 
-⚠ Note that on recent versions of Raspberry Pi OS, you may need to **enable I2C manually**. You can do this using the Raspberry Pi Configuration utility - find it in the menu under 'Preferences', or enter `sudo raspi-config` at a Terminal prompt. The option to enable I2C is under 'Interfaces'.
+⚠ Note that on recent versions of Raspberry Pi OS, you may need to **enable I2C manually**. You can do this using the Raspberry Pi Configuration utility - find it in the 'Preferences' menu, or enter `sudo raspi-config` at a Terminal prompt. The option to enable I2C is under 'Interfaces'.
 
 ### Manual install:
 
