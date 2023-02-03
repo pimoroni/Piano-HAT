@@ -41,7 +41,7 @@ sudo apt install python3-pianohat
 other environments: 
 
 ```bash
-sudo pip3 install pianohat
+python3 -m pip install pianohat
 ```
 
 ### Development:
