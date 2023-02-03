@@ -24,43 +24,24 @@ In the new terminal window type the command exactly as it appears below (check f
 curl https://get.pimoroni.com/pianohat | bash
 ```
 
-Alternatively, on Raspbian, you can download the `pimoroni-dashboard` and install your product by browsing to the relevant entry:
-
-```bash
-sudo apt-get install pimoroni
-```
-(you will find the Dashboard under 'Accessories' too, in the Pi menu - or just run `pimoroni-dashboard` at the command line)
-
 If you choose to download examples you'll find them in `/home/pi/Pimoroni/pianohat/`.
+
+⚠ Note that on recent versions of Raspberry Pi OS, you may need to **enable I2C manually**. You can do this using the Raspberry Pi Configuration utility - find it in the menu under 'Preferences', or enter `sudo raspi-config` at a Terminal prompt. The option to enable I2C is under 'Interfaces'.
 
 ### Manual install:
 
 #### Library install for Python 3:
 
-on Raspbian:
+on Raspberry Pi OS:
 
 ```bash
-sudo apt-get install python3-pianohat
+sudo apt install python3-pianohat
 ```
 
 other environments: 
 
 ```bash
 sudo pip3 install pianohat
-```
-
-#### Library install for Python 2:
-
-on Raspbian:
-
-```bash
-sudo apt-get install python-pianohat
-```
-
-other environments: 
-
-```bash
-sudo pip2 install pianohat
 ```
 
 ### Development:
@@ -76,7 +57,7 @@ In all cases you will have to enable the i2c bus.
 
 ## Documentation & Support
 
-* Guides and tutorials - https://learn.pimoroni.com/piano-hat
+* Guides and tutorials - https://learn.pimoroni.com/
 * Function reference - http://docs.pimoroni.com/pianohat/
 * GPIO Pinout - https://pinout.xyz/pinout/piano_hat
 * Get help - http://forums.pimoroni.com/c/support
